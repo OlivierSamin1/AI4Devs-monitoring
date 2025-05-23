@@ -28,4 +28,10 @@ yarn-error.log*
 .idea
 .vscode
 
-# .env
+.env
+
+# Terraform secrets
+tf/terraform.tfvars
+*.tfstate
+*.tfstate.backup
+.terraform/

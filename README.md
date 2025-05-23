@@ -68,7 +68,7 @@ npm install
 ```
 cd backend
 npm run build
-````
+```
 4. Inicia el servidor backend:
 ```
 cd backend
@@ -159,4 +159,33 @@ POST http://localhost:3010/candidates
     }
 }
 ```
+
+## Monitorización con Datadog
+
+Este proyecto utiliza Datadog para la monitorización y observabilidad. El Agente de Datadog se configura de la siguiente manera:
+
+### Configuración del Agente Datadog
+
+1. La clave API se debe agregar al archivo de configuración del Agente Datadog: `/etc/datadog-agent/datadog.yaml`
+2. También se debe configurar el SITE en el mismo archivo de configuración.
+
+### Gestión del servicio
+
+El Agente Datadog funciona como un servicio del sistema:
+
+- Para iniciar el servicio:
+  ```
+  sudo systemctl start datadog-agent
+  ```
+
+- Para detener el servicio:
+  ```
+  sudo systemctl stop datadog-agent
+  ```
+
+### Configuración adicional
+
+Para habilitar el soporte de Docker, se recomienda agregar el usuario dd-agent al grupo docker.
+
+El Agente Datadog se ejecuta en segundo plano y envía métricas a Datadog de forma continua.
 
