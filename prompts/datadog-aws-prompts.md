@@ -51,3 +51,12 @@ fix this issue: <console log running terraform init>
 
 **Prompt 8:**
 Instead of providing me with a guide to fix the bug, I want you to do it for me
+
+----- creating another commit during process when hitting credentials issues ----
+
+**Prompt 9:**
+These credentials issues might come from my data. I am not sure of what is the expected data for datadog. I have a datadog api key id and also the datadog api  key value corresponding to this ID. Same thing for the datadog APP KEY. So in the .env file I provided both. The ones finishing with ID are not the hidden value never to be shown. So maybe it has lead to confusion when you generated the credentials.
+
+----- commit with config OK but with fake AWS credentials ------------
+
+**Prompt 10:**
