@@ -1,4 +1,4 @@
-resource "aws_instance" "datadog_monitored_instance" {
+resource "aws_instance" "datadog_monitored_instance_new" {
   ami           = "ami-0989fb15ce71ba39e" # Amazon Linux 2 AMI in eu-north-1
   instance_type = "t3.micro"
   

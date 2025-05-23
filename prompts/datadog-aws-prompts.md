@@ -37,3 +37,17 @@ Task 3:
 **Prompt 4:**
 There is sometinh that I think is wrong: 
 The @variables.tf expose my secrets here!!!
+
+--- first commit done here. I am expecting errors so this is a safe point -------
+
+**Prompt 5:**
+Now what are the steps to follow to ensure that the monitoring is properly setup and working? 
+
+**Prompt 6:**
+I have this output <console log about duplicated provider config>
+
+**Prompt 7:**
+fix this issue: <console log running terraform init>
+
+**Prompt 8:**
+Instead of providing me with a guide to fix the bug, I want you to do it for me
