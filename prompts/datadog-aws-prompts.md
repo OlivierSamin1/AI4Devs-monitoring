@@ -73,3 +73,8 @@ Let's understand what is the credentials issues, I provided the ACCESS_KEY_ID an
 
 **Prompt 14:**
 I reactivated my key, try again
+
+-------- commit now everything is setup -----------------
+
+**Prompt 15:**
+Now everything is setup properly, I expect that in order to work, I first need to deply my app into the EC2. Correct?
