@@ -20,13 +20,54 @@ data "aws_iam_policy_document" "datadog_aws_integration_assume_role" {
 data "aws_iam_policy_document" "datadog_aws_integration" {
   statement {
     actions = [
+      # CloudWatch
       "cloudwatch:Get*",
       "cloudwatch:List*",
+      "cloudwatch:Describe*",
+      
+      # EC2
       "ec2:Describe*",
-      "support:*",
+      "ec2:Get*",
+      
+      # CloudTrail
+      "cloudtrail:DescribeTrails",
+      "cloudtrail:GetTrailStatus",
+      "cloudtrail:LookupEvents",
+      
+      # Cost Explorer
+      "ce:GetCostAndUsage",
+      
+      # Tags
       "tag:GetResources",
       "tag:GetTagKeys",
-      "tag:GetTagValues"
+      "tag:GetTagValues",
+      
+      # S3
+      "s3:GetBucketTagging",
+      "s3:GetBucketLocation",
+      "s3:ListAllMyBuckets",
+      "s3:ListBucket",
+      
+      # RDS
+      "rds:Describe*",
+      "rds:List*",
+      
+      # ELB
+      "elasticloadbalancing:Describe*",
+      
+      # Lambda
+      "lambda:List*",
+      "lambda:Get*",
+      
+      # SQS
+      "sqs:List*",
+      "sqs:Get*",
+      
+      # Other helpful services
+      "kinesis:List*",
+      "kinesis:Describe*",
+      "autoscaling:Describe*",
+      "support:*"
     ]
     resources = ["*"]
   }

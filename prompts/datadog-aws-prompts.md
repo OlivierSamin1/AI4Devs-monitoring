@@ -60,3 +60,16 @@ These credentials issues might come from my data. I am not sure of what is the e
 ----- commit with config OK but with fake AWS credentials ------------
 
 **Prompt 10:**
+You are saying we are working with a fake AWS credentials for testing. But I need to run with my real credentials for AWS. What are the steps to perform to do so?
+
+**Prompt 11:**
+What are AWS access keys and what are the steps to get one once I am connected to my AWS account?
+
+**Prompt 12:**
+I have entered my AWS credentials with the script, I want you to perform the other steps written in @REAL_AWS_SETUP.md 
+
+**Prompt 13:**
+Let's understand what is the credentials issues, I provided the ACCESS_KEY_ID and SECRET_ACCESS_KEY 
+
+**Prompt 14:**
+I reactivated my key, try again
