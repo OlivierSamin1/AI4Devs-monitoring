@@ -78,3 +78,5 @@ I reactivated my key, try again
 
 **Prompt 15:**
 Now everything is setup properly, I expect that in order to work, I first need to deply my app into the EC2. Correct?
+
+---- final commit --------- 
