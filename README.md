@@ -189,3 +189,5 @@ Para habilitar el soporte de Docker, se recomienda agregar el usuario dd-agent a
 
 El Agente Datadog se ejecuta en segundo plano y envía métricas a Datadog de forma continua.
 
+### HERE IS THE PICTURE OF THE PRODUCTION ERROR
+[picture](./error-prod.png)
