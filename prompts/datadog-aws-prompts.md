@@ -79,4 +79,27 @@ I reactivated my key, try again
 **Prompt 15:**
 Now everything is setup properly, I expect that in order to work, I first need to deply my app into the EC2. Correct?
 
----- final commit --------- 
+**Prompt 16:**
+analyse the error 
+
+Run mkdir -p ~/.ssh
+  mkdir -p ~/.ssh
+  ssh-keyscan -H *** >> ~/.ssh/known_hosts
+  shell: /usr/bin/bash -e {0}
+  env:
+    AWS_DEFAULT_REGION: ***
+    AWS_REGION: ***
+    AWS_ACCESS_KEY_ID: ***
+    AWS_SECRET_ACCESS_KEY: ***
+    SSH_AUTH_SOCK: /tmp/ssh-g4nA2s9bG5j7/agent.2286
+    SSH_AGENT_PID: 2287
+getaddrinfo ***: Name or service not known
+getaddrinfo ***: Name or service not known
+getaddrinfo ***: Name or service not known
+getaddrinfo ***: Name or service not known
+getaddrinfo ***: Name or service not known
+Error: Process completed with exit code 1.
+
+It is coming from @ci.yml 
+
+Explain me the error and how to fix it

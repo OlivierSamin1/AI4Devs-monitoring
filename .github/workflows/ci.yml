@@ -91,8 +91,32 @@ jobs:
       - name: Setup known hosts
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.EC2_INSTANCE }} >> ~/.ssh/known_hosts
+          echo "Attempting to connect to ${{ secrets.EC2_INSTANCE }}"
+          # Verify the instance is reachable
+          if ping -c 1 ${{ secrets.EC2_INSTANCE }} &> /dev/null; then
+            echo "Instance is reachable"
+          else
+            echo "WARNING: Instance might not be reachable"
+            # Continue anyway as ping might be blocked
+          fi
           
+          # Try with -H first (hash the hostname)
+          if ssh-keyscan -H ${{ secrets.EC2_INSTANCE }} >> ~/.ssh/known_hosts; then
+            echo "Successfully added host key with -H option"
+          else
+            echo "Trying without -H option"
+            # Try without -H as fallback
+            ssh-keyscan ${{ secrets.EC2_INSTANCE }} >> ~/.ssh/known_hosts || true
+          fi
+          
+          # Verify we have something in known_hosts
+          if [ -s ~/.ssh/known_hosts ]; then
+            echo "Successfully added host to known_hosts"
+          else
+            echo "ERROR: Failed to add host to known_hosts"
+            exit 1
+          fi
+      
       - name: Copy files to EC2
         run: |
           cd backend
