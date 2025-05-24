@@ -46,7 +46,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     # Only deploy on push to pipeline-OS branch, not on pull requests
-    if: github.event_name == 'push' && github.ref == 'refs/heads/pipeline-OS'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/monitoring-OS'
     
     steps:
       - name: Checkout code
